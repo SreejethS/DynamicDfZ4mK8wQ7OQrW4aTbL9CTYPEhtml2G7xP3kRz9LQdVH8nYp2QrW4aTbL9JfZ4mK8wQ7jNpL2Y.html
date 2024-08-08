@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Change Example</title>
+    <style>
+        .class1 {
+            color: red;
+        }
+        .class2 {
+            color: blue;
+        }
+        .class3 {
+            color: green;
+        }
+        .class4 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="class1">This element's class changes every 5 seconds. Invisible Element 1</div>
+    <div class="class1">This element's class changes every 5 seconds. Invisible Element 2</div>
+    <div class="class1">This element's class changes every 5 seconds. Invisible Element 3</div>
+    <div class="class1">This element's class changes every 5 seconds. Invisible Element 4</div>
+    <div class="class1">This element's class changes every 5 seconds. Invisible Element 5</div>
+
+    <script>
+        const classes = ['class1', 'class2', 'class3', 'class4'];
+        const elements = document.querySelectorAll('body > div');
+
+        setInterval(() => {
+            elements.forEach((element, index) => {
+                const randomClass = classes[Math.floor(Math.random() * classes.length)];
+                element.className = randomClass;
+
+                const randomNum = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+                element.textContent = `This element's class changes every 5 seconds. Invisible Element ${randomNum}`;
+            });
+        }, 5000); // Change class and number every 5 seconds
+    </script>
+</body>
+</html>
