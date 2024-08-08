@@ -20,14 +20,14 @@
     </style>
 </head>
 <body>
-    <div class="class1">This element's class changes every 5 seconds. Invisible Element 1</div>
-    <div class="class1">This element's class changes every 5 seconds. Invisible Element 2</div>
-    <div class="class1">This element's class changes every 5 seconds. Invisible Element 3</div>
-    <div class="class1">This element's class changes every 5 seconds. Invisible Element 4</div>
-    <div class="class1">This element's class changes every 5 seconds. Invisible Element 5</div>
+    <div class="class1">_ngcontent-pbp-c4811</div>
+    <div class="class1">_ngcontent-pbp-c4811</div>
+    <div class="class1">_ngcontent-pbp-c4811</div>
+    <div class="class1">_ngcontent-pbp-c4811</div>
+    <div class="class1">_ngcontent-pbp-c4811</div>
 
     <script>
-        const classes = ['class1', 'class2', 'class3', 'class4'];
+        const classes = ['class1', 'class2', 'class3', 'class4', 'class5', 'class6', 'class7', 'class8'];
         const elements = document.querySelectorAll('body > div');
 
         setInterval(() => {
@@ -35,8 +35,8 @@
                 const randomClass = classes[Math.floor(Math.random() * classes.length)];
                 element.className = randomClass;
 
-                const randomNum = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-                element.textContent = `This element's class changes every 5 seconds. Invisible Element ${randomNum}`;
+                const randomNum = Math.floor(Math.random() * 9) + 1; // Random number between 1 and 10
+                element.textContent = `_ngcontent-pbp-c48${randomNum}11`;
             });
         }, 5000); // Change class and number every 5 seconds
     </script>
